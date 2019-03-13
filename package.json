@@ -1,0 +1,33 @@
+{
+  "name": "js-tdd",
+  "version": "1.0.0",
+  "description": "Estudo de TDD com JS",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "prepush": "npm run lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunoromeiro/js-tdd.git"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "estudo",
+    "library"
+  ],
+  "author": "Bruno Romeiro <bruno.romeiro@gmail.com> (http://brunoromeiro.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brunoromeiro/js-tdd/issues"
+  },
+  "homepage": "https://github.com/brunoromeiro/js-tdd#readme",
+  "devDependencies": {
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "husky": "^1.3.1"
+  }
+}
