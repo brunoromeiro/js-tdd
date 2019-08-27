@@ -1,19 +1,30 @@
+const { expect } = require('chai');
+
 describe('Main', () => {
-  describe('Method A', () => {
-    context('Case 1', () => {
-      it('should happen blabla', () => {
-        // Espera o que aconteça
-        // Entra de dados / método sum (2,2)
-        // Espera retornar (4) => true | (3) => false => broken test
-      });
-    });
+  let arr;
 
-    context('Case 2', () => {
-
-    });
+  // roda toda vez, antes do bloco
+  beforeEach(() => {
+    arr = [1, 2, 3];
   });
 
-  describe('Method B', () => {
+  // testar tipos ou se existe (smoke test)
+  it('should be an array', () => {
+    expect(arr).to.be.a('array');
+  });
 
+  it('should have a size of 4 when push anoter value to the array', () => {
+    arr.push(4);
+    expect(arr).to.have.lengthOf(4);
+  });
+
+  it('should have a size of 3 when pop a value from the array', () => {
+    arr.pop();
+    expect(arr).to.have.lengthOf(2);
+  });
+
+  it('should remove 3 when use pop in the array', () => {
+    arr.pop();
+    expect(arr).to.not.include(3);
   });
 });
