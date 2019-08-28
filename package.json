@@ -9,8 +9,8 @@
     "build:watch": "npm run build -- --watch",
     "lint": "./node_modules/.bin/eslint src/*.js",
     "prepush": "npm run lint",
-    "test": "./node_modules/.bin/mocha specs/**/*.spec.js --require babel-register",
-    "test:tdd": "./node_modules/.bin/mocha specs/**/*.spec.js --require babel-register --watch",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
+    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
     "test:coverage": "nyc npm test"
   },
   "nyc": {
@@ -19,7 +19,7 @@
       "html"
     ],
     "exclude": [
-      "specs/**"
+      "tests/**"
     ]
   },
   "repository": {
@@ -46,8 +46,8 @@
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.6.1",
     "husky": "^0.11.9",
-    "mocha": "^3.2.0",
-    "nyc": "^10.2.0",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
     "rimraf": "^2.6.1"
   }
 }
